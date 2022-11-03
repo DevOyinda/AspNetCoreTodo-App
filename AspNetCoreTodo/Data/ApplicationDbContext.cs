@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace AspNetCoreTodo.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public partial class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -15,6 +15,8 @@ namespace AspNetCoreTodo.Data
         }
 
         public DbSet<TodoItem> Items { get; set; }
+
+        public DbSet<ApplicationUser> AppUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
