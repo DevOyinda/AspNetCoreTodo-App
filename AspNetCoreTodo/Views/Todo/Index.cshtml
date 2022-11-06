@@ -22,10 +22,12 @@
         {
             <tr>
                 <td>
+                    @* I can as well put this form in a sparate class
+                    and import it here like I did at line 43*@
                     <form asp-action="MarkDone" method="POST">
                         <input type="checkbox" class="done-checkbox">
                         <input type="hidden" name="id" value="@item.Id">
-                    </form>          
+                    </form>
                 </td>
                 <td>@item.Title</td>
                 <td>@item.DueAt.Humanize()</td>

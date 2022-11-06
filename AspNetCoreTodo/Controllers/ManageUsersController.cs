@@ -15,8 +15,7 @@ namespace AspNetCoreTodo.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public ManageUsersController(
-            UserManager<ApplicationUser> userManager)
+        public ManageUsersController(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
         }
@@ -24,7 +23,7 @@ namespace AspNetCoreTodo.Controllers
         public async Task<IActionResult> Index()
         {
             var admins = (await _userManager
-                .GetUsersInRoleAsync("Administrator"))
+                .GetUsersInRoleAsync(Constants.AdministratorRole))
                 .ToArray();
 
             var everyone = await _userManager.Users

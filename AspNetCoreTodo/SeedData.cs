@@ -26,7 +26,10 @@ namespace AspNetCoreTodo
         {
             var alreadyExists = await roleManager
                 .RoleExistsAsync(Constants.AdministratorRole);
-            if (alreadyExists) return;
+            if (alreadyExists)
+            {
+                return;
+            }
 
             await roleManager.CreateAsync(
                 new IdentityRole(Constants.AdministratorRole));
@@ -39,7 +42,11 @@ namespace AspNetCoreTodo
                 .Where(x => x.UserName == "admin@todo.local")
                 .SingleOrDefaultAsync();
 
-            if (testAdmin != null) return;
+            if (testAdmin != null)
+            {
+                return;
+            }
+
             testAdmin = new ApplicationUser
             {
                 UserName = "admin@todo.local",

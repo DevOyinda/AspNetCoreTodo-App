@@ -16,7 +16,7 @@ namespace AspNetCoreTodo.Data
 
         public DbSet<TodoItem> Items { get; set; }
 
-        public DbSet<ApplicationUser> AppUsers { get; set; }
+        
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

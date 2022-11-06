@@ -1,7 +1,10 @@
 ﻿@model TodoItem
 
-<form asp-action ="AddItem" method="POST">
-    <label asp-for ="Title">Add a new item:</label>
+
+<form asp-action="AddItem" method="POST">
+    <label asp-for="Title">Add a new item:</label>
     <input asp-for="Title">
+    @* setting the autocomplete = "off" helps to remove history from input field *@
+    <input placeholder="Select Date" asp-for="DueAt" autocomplete="off" id="datepicker">
     <button type="submit">Add</button>
 </form>

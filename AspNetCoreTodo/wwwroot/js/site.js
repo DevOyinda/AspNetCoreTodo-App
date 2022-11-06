@@ -18,3 +18,11 @@ function markCompleted(checkbox) {
     var form = checkbox.closest('form');
     form.submit();
 }
+
+//I will change the date picker, it is not given me what I want
+
+//$('.datepicker').pickadate();
+
+$(function () {
+    $("#datepicker").datepicker();
+});
