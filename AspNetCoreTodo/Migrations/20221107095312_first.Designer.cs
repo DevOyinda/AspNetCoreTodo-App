@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace AspNetCoreTodo.Data.Migrations
+namespace AspNetCoreTodo.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221107090020_secondMigration")]
-    partial class secondMigration
+    [Migration("20221107095312_first")]
+    partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

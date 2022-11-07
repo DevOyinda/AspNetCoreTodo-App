@@ -50,7 +50,8 @@ namespace AspNetCoreTodo
             testAdmin = new ApplicationUser
             {
                 UserName = "admin@todo.local",
-                Email = "admin@todo.local"
+                Email = "admin@todo.local",
+                EmailConfirmed = true
             };
             await userManager.CreateAsync(
                 testAdmin, "NotSecure123!!");

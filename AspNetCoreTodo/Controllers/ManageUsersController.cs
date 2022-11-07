@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace AspNetCoreTodo.Controllers
 {
-    [Authorize(Roles ="Administrator")]
+    [Authorize(Roles = Constants.AdministratorRole)]
     public class ManageUsersController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
