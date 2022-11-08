@@ -53,6 +53,7 @@ namespace AspNetCoreTodo
                 Email = "admin@todo.local",
                 EmailConfirmed = true
             };
+
             await userManager.CreateAsync(
                 testAdmin, "NotSecure123!!");
             await userManager.AddToRoleAsync(
